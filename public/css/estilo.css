@@ -47,6 +47,12 @@ img {
 
 }
 
+
+.selectedactive{
+  color: #0056b3;
+}
+
+
 .btn-outline-primary {
     color: #fffefd;
   background-color: none;
@@ -210,3 +216,25 @@ strong{
         color:#6E6E6E;
         font-size: 1.1rem;
       }
+
+
+
+.img100{
+  width: 100%; 
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

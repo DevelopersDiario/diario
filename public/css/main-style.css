@@ -15,13 +15,37 @@ body{
 
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-      /* text-decoration:underline; */
-      color: #0056b3;
 
 
+
+
+.img100{
+  width: 100%; 
+  
+  max-height: 320px;
+ 
+  min-height: 320px;
+  height: auto;
+  
 }
 
+.containerimg{
+  max-height: 320px;
+min-height: 320px;
+}
+
+.cotainercover{
+  max-height: 465px;
+  min-height: 465px;
+}
+
+.img100cover{
+  width: 100%; 
+  max-width: 700px;
+  max-height: 465px;
+  height: auto;
+}
+/*700*465*/
 /**Imagenes**/
 
 .imgPerfil {
@@ -42,9 +66,15 @@ body{
   margin-top: 10px !important;
 }
 
+
+.cont-21 {
+  margin-top: 150px !important;
+  margin-bottom: 150px !important;
+}
+
 .card-header {
   color: #fff !important;
-  background-color: #1C1C1C !important;
+  background-color: #17a2b8 !important;
 }
 /** contenedor de botones de inicio y configuracion***/
 .cont-1 {
@@ -57,6 +87,10 @@ body{
 
 .btn {
   margin-bottom: 2px !important;
+}
+
+.mgb10{
+  margin-bottom: 8%;
 }
 
 

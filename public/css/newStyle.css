@@ -1,0 +1,244 @@
+
+.selectedactive{
+  color: #0056b3 !important;
+}
+
+
+#main-tmpl{
+  position: relative; 
+  margin-top: 0;
+}
+
+
+#main-tmpl .item {
+  
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  
+}
+
+@media screen and (max-height:1024px){#main-tmpl .item {height: 900px;}}
+@media screen and (max-height:812px){#main-tmpl .item {height: 688px;}}
+@media screen and (max-height:736px){#main-tmpl .item {height: 620px;}}
+@media screen and (max-height:568px){#main-tmpl .item {height: auto;}}
+
+
+/*#main-tmplpar{
+  position: relative; 
+  margin-top: 0;
+}
+
+
+#main-tmplpar .itempar {
+  
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  
+}
+
+#main-tmplpar .itempar22{
+  height: auto;
+}
+
+@media screen and (max-height:1024px){#main-tmplpar .itempar {height: 430px;}}
+@media screen and (max-height:812px){#main-tmplpar .itempar {height: 390px;}}
+@media screen and (max-height:736px){#main-tmplpar .itempar {height: auto;}}
+@media screen and (max-height:568px){#main-tmplpar .itempar {height: auto;}}*/
+
+
+.txtwhi{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+.pdggen{
+  padding-left: 100px;
+  padding-right: 200px;
+}
+
+
+.mgtop10{
+  margin-top: 5%;
+}
+
+/*DRAG AND ROP FILES*/
+.upload-area{
+    width: 70%;
+    height: 200px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    overflow: auto;
+}
+
+.upload-area:hover{
+    cursor: pointer;
+}
+
+.upload-area h1{
+    text-align: center;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 50px;
+    color: darkslategray;
+}
+
+#file{
+    display: none;
+}
+
+#filetwo{
+    display: none;
+}
+
+/* Thumbnail */
+.thumbnail{
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    float: left;
+    margin: 5px;
+}
+
+.size{
+    font-size:12px;
+}
+
+/*******************/
+
+
+
+
+
+
+input,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  box-sizing: border-box;
+}
+
+label {
+  box-sizing: border-box;
+}
+
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+input[type='email'],
+input[type='text'] {
+  
+  background-color: white;
+  height: calc(3em + 2px);
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 1.5em;
+  transition: all 0.5s ease-out;
+  box-shadow: none;
+  resize: none;
+  outline: none;
+}
+input[type='email']:hover,
+input[type='text']:hover {
+  border: 1px solid #cccccc;
+}
+
+
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #17a2b8;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px ;
+    margin-top:10px ;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion .active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 100%;
+  height: auto;
+    padding: 0 18px;
+    background-color: white;
+    display: block;
+    overflow: hidden;
+}
+
+
+
+#fghjk{
+  padding-top: 0%;
+}
+
+@media screen and (max-width:800px){
+#fghjk{
+  padding-top: 14%;
+}}
+
+
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #0056b3;
+    border-color:#48b098;
+    border-color: #f8f9fa;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.btn-file:hover {
+    color: #0056b3;
+    background-color: #fefefe;
+    background-image: none;
+    border:none;
+    font-weight:normal;
+}
+
+
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

@@ -28,11 +28,20 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="shortcut icon" href="{{ asset('images/herramientas.ico') }}"/>
+   
     @show
 </head>
-<body>
+<body style="margin-top: 1%;">
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top " >
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="images/instrumentos.png" width="60" height="60" class="d-incline-block aling-top " alt="logo">
@@ -49,7 +58,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" id="menu">
                         <!-- Authentication Links -->
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
@@ -57,11 +66,16 @@
 
                         @else
                             <li class="nav-item active ml-2">
-                              <a class="nav-link" href="" data-click="scroll-to-target">INICIO</a>
+                              <a class="nav-link" id="iniciouno" onclick="window.location='{{ url("login") }}'" href="#inicio" >INICIO</a>
+                            </li>
+
+                            <li class="nav-item ml-2">
+                              <a class="nav-link"  id="iniciodos" onclick="window.location='{{ url("grupos") }}'" >GRUPOS</a>
                             </li>
                             <li class="nav-item ml-2">
-                              <a class="nav-link" href="" data-click="scroll-to-target">CONFIGURACIÓN</a>
+                              <a class="nav-link"  id="iniciotres" href="{{route('configuracion')}}" >CONFIGURACIÓN</a>
                             </li>
+
                             &nbsp &nbsp
                             <form class="form-inline my-2 my-lg-0">
                               <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -70,7 +84,7 @@
                             &nbsp &nbsp &nbsp &nbsp
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->nombre }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -98,11 +112,80 @@
     </div>
     @section('footerjs')
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+   
+
+<script type="text/javascript">
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/eventsInput.js')}}"></script>
+     <script>
+       /* $(document).ready(function() {
+            //$("#iniciouno").addClass('selectedactive');
+
+            $("#iniciouno").click(function(event) {
+                
+                $("#iniciouno").addClass('selectedactive');
+                $("#iniciodos").removeClass('selectedactive')
+                $("#iniciotres").removeClass('selectedactive')
+            });
+
+            $("#iniciodos").click(function(event) {
+                
+                $("#iniciodos").addClass('selectedactive');
+                $("#iniciouno").removeClass('selectedactive')
+                $("#iniciotres").removeClass('selectedactive')
+            });
+
+
+            $("#iniciotres").click(function(event) {
+                
+                $("#iniciotres").addClass('selectedactive');
+                $("#iniciodos").removeClass('selectedactive')
+                $("#iniciouno").removeClass('selectedactive')
+            });
+            
+        });*/
+    </script>
+
     @show
 </body>
 </html>

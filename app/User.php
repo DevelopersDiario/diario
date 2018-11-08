@@ -9,13 +9,19 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'usuario';
+    protected $primaryKey = 'idusuario';
+
+    protected $loginPath = '/auth/login';
+    protected $redirectPath = '/home';
+    protected $redirectTo = '/home';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nombre', 'correo', 'password', 'grupo', 'cuenta', 'foto', 'fportada',
     ];
 
     /**

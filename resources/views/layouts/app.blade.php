@@ -80,12 +80,14 @@
                             <form class="form-inline my-2 my-lg-0">
                               <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
+                            </form>                             
+
                             &nbsp &nbsp &nbsp &nbsp
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->nombre }} <span class="caret"></span>
-                                </a>
+
+                                </a>                                
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -94,16 +96,24 @@
                                         {{ __('Cerrar Sesion') }}
                                     </a>
 
+
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
+                               
                             </li>
+                             <a data-toggle="modal" data-target="#cambiaImagen"><img src="{{ Auth::user()->foto }}" class='img-responsive ' style='width: 100px; height: 60px' > </a>
+
 
                         @endguest
                     </ul>
                 </div>
             </div>
+
+           
+
         </nav>
 
         <main class="py-4">

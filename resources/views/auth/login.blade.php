@@ -8,8 +8,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card" style="justify-content: center">
+                <div class="card-header" style="text-align: center;">{{ __('Iniciar Sesión') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -43,17 +43,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                               <input type="image" id="image" alt="Login"    src="images/iconos/fb.png" width="100%" />
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                               <input type="image" id="image" alt="Login"    src="images/iconos/goo.png" width="100%" />
-                            </div>
-                        </div>
+                      
 
 
 

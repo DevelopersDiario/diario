@@ -2,12 +2,12 @@
 
 @section('titulo')
   Diario Interactivo
-@endsection
+@endsection 
 
 
 
 @section('header-content')
-<div class="container-fluid navbar-dark bg-dark fixed-top">
+<div class="container-fluid navbar-dark bg-dark fixed-top" >
   <nav class="navbar navbar-expand-lg  container ">
     <a class="navbar-brand mr-2" href="">
       <img src="images/instrumentos.png" width="60" height="60" class="d-incline-block aling-top " alt="logo">AMDI
@@ -18,7 +18,7 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item active ml-2">
+       <!-- <li class="nav-item active ml-2">
           <a class="nav-link" href="#inicio">INICIO</a>
         </li>
         <li class="nav-item ml-2">
@@ -29,11 +29,14 @@
         </li>
         <li class="nav-item ml-2 py-1">
           <a href="#" onclick="window.location='{{ url("register") }}'"  data-toggle="modal" data-target="#registros" class="btn btn-outline-primary btn-block ">REGISTRARME</a>
-        </li>
+        </li>-->
 
         <li class="nav-item ml-2 py-1">
+          <a  href="#" onclick="window.location='{{ url("login") }}'" class="btn btn-primary pull-right" data-toggle="modal" data-target="#login">
+   INICIAR SESIÓN
+</a>
 
-          <a href="#" onclick="window.location='{{ url("login") }}'" data-toggle="modal" data-target="#login"  class="btn btn-outline-primary btn-block ">INICIAR SESIÓN</a>
+         <!-- <a href="#" onclick="window.location='{{ url("login") }}'" data-toggle="modal" data-target="#login"  class="btn btn-outline-primary btn-block ">INICIAR SESIÓN</a>-->
         </li>
       </ul>
     </div>
@@ -42,135 +45,104 @@
 @endsection
 
 @section('main-content')
+
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-responsive" src="images/diario.png"  alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>-->
+
+
+
 <section id="main-tmpl">
         <div class="item " >
 <section class="mainx-tmpl">
   <div class="item">
     <div id="inicio">
-      <div class="container-fluid">
-        <div class="row" >
-          <div   class="col-lg-10" class="col-md-8" class="col-sm-10"  class="col-xl-12">
-            <img class="imagen" src="images/diario.png" class="img-responsive" width="500" height="580">
-            <h1><p class="inicio">CAPTURA TUS</p></h1>
-            <h2><p class="momentos">MOMENTOS</p></h2>
+      <div class="container-fluid">        
+          <div   class="row col-xl-12" >  
+          <div class="col-sm-4">         
+             <img class="img-responsive" src="images/didactico.png" style="position: relative; width: 70%; height: auto; left: 2%; border: 1px"  /> 
+              </div> 
+             <div class="col-md-8">
+              <h1><p class="">Registra t&uacute;s momentos</p>
+              </h1>
+              <div class="col-md-12"> 
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style="justify-content: center;">
+    <div class="carousel-item active" style="justify-content: center">
+      <img class="d-block w-20" src="images/diario_opt.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-20" src="images/image-add-button_opt.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-20"src="images/instrumentos_opt.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+               </div>
+             
+           <!-- <h2><p class="momentos"></p></h2>
             <h3><p>Guarda tus archivos de las actividades</p></h3>
-            <h3><p>escolares en tu diario personal. </p></h3>
-          </div>
-        </div>
+            <h3><p>escolares en tu diario personal. </p></h3>-->
+           
+
+             </div>
+           </div>
+            
+            
+
+           <!-- <img class="img-responsive" src="images/diario.png" class="img-responsive" width="500" height="580">-->
+            
+    
       </div>
     </div>
   </div>
 </section>
 
        </div>
-   </section>
+   </section>  
 
 @endsection
 
-@section('nosotros')
-<section id="main-tmpl">
-        <div class="item " id="nosotros">
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
-          <h2  class="text-center" id="obj"><strong>Objetivo</strong> <i class="fa fa-map-marker pull-right hidden-xs-down" aria-hidden="true"></i></h2>
-          <p class="text-justify ml-5 mr-5">
-              Objetivo Comprender los procesos inherentes al pensamiento reflexivo que se generan a través del diario interactivo en línea, realizado por un  grupo estudiantes en sus escenarios reales de práctica. <br clear="none">DidacTIC imgObject Diseño didáctico Interactivo (DidacTIC) es una asociación civil que nació con el propósito de crear diseños tecnopedagógico que faciliten a alumnos y docentes la enseñanza y el aprendizaje reflexivo. <br clear="none"> Realiza diagnósticos sobre el uso de las tecnologías de la información en el ámbito educativo en sus diferentes niveles de acuerdo a su entorno y contexto. DidacTIC está consciente de la presencia de la tecnología en las actividades diarias y sobre todo, las tecnologías móviles, por esto busca captar la atención y consigo el interés del alumno y docentes en formación y servicio desarrollando competencias en el uso de las TIC mediante herramientas tecnológicas que apoyen la práctica docente como la aplicación móvil del Diario Interactivo, los e-portafolios, donde el estudiante capture sus momentos de aprendizaje y obtenga a través de la reflexión de los escenarios un aprendizaje constructivista. DidacTIC impulsa el uso de las TIC con el afán de ser partícipe del desarrollo educativo y tecnológico en Oaxaca.
-          </p>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >
-        <img src="images/didactico.png" style="position: relative; width: 75%; height: auto; left: 12%;" />
-      </div>
-    </div>
-
-       </div>
-   </section>
-@endsection
-
-
-@section('contacto')
-<section id="main-tmpl">
-        <div class="item " id="contacto">
-
-
-      <div class="container-fluid">
-        <div class="row" >
-          <div   class="col-lg-10" class="col-md-8" class="col-sm-10"  class="col-xl-12">
-            <img src="images/mochis.png"  width="300" height="400" class="img-responsive" align="left" >
-            <br>
-            <br>
-            <h3 class="redes"><p>
-                <a class="txtwhi" target="_blank" href="https://www.facebook.com/didactic/"> <img src="images/sobre.svg" width="40" height="40" > didaticsoax@gmail.com  <br clear="none"></a></p></h3>
-                <br>
-                <br>
-                 <h3><p><a class="txtwhi" target="_blank" href="https://www.gmail.com/didactic/"> <img src="images/facebook.svg" width="40" height="40" > didaticsoax@gmail.com</a></p></h3>
-         </div>
-      </div>
-    </div>
- </div>
-   </section>
-
-
-
-
-
-
-@endsection
-
-@section('footer')
-  <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12" >
-<center>
-            <p class="txtwhi"> <strong class="txtwhi">didaticsoax@gmail.com </strong>   &nbsp;&copy;2018- Todos los derechos reservados. Diseñado por <a class="txtwhi" href="index.php">DidacTIC--Diseño Didactico Interactivo AC</a></p>
-    </center>
-          </div>
-
-          <div class="col-sm-12 text-xs-right" style="padding-top: 2%;"><center>
-            <ul class="list-inline">
-
-              <li class="list-inline-item">
-                <a class="txtwhi"  href="index.php">Inicio</a>
-              </li>
-              <li class="list-inline-item">
-                <a class="txtwhi" href="aviso.html">Aviso legal</a>
-              </li>
-              <li class="list-inline-item">
-                <a class="txtwhi" href="#" data-toggle="modal" data-target="#miMod666">Terminos y condiciones</a>
-              </li>
-            </ul></center>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="modal fade" id="miMod666" tabindex="-1" role="dialog" arialabelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                     <h5 class="modal-title">Términos y condiciones</h5>
-                    <button type="button" class="close" data-dismiss="modal" arialabel="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                <div class="contenedor">
-                <div class="Terminos">
-                    <h4> <p> He leído y acepto los términos de la aplicación.
-      Es responsable del uso de los servicios por cualquier contenido que publique y de las consecuencias derivadas. El contenido que envíe, publique o muestre podrá ser visto por otros usuarios de los servicios a través de servicios y sitios web de terceros. Solo deberá proporcionar el contenido que quiera compartir con otras personas en estos Término. Tip: Lo que digas en Mi Diario se verá alrededor del mundo instantáneamente. ¡Eres lo que publicas! El usuario únicamente podrá hacer uso de estos servicios si acepta un contrato vinculante con Mi Diario como también a recibir dichos servicios según las leyes de México u otra jurisdicción aplicable. El usuario solo podrá hacer uso de dicho Servicios conforme a dichas condiciones como a toda ley, normativa o reglamento aplicable sea local, estatal, nacional o internacional.
-      </p></h4>
-           </div>
-           </div>
-
-           </div>
-          </div>
-        </div>
-        </div>
-
-    </footer>
-@endsection
 
 
 @yield('main-content')

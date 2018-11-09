@@ -5,8 +5,9 @@
 
 
 @section('content')
-<section id="sw">
-  <div class=" " style="height: auto; padding-top: 3%;" id="inicio">
+<section class="form-control" id="sw" style="height: auto; padding-top: 3%;">
+  <nav class="card-text" id="startTime" style="margin:10px !important; font-weight:bold;"></nav>
+  <div class=" " id="inicio">
     @if(session('alert'))
     <div class="alert alert-danger" style="height:auto;padding-top;3%;margin-top:1%;" id="inicio">
       {{session('alert')}}
@@ -14,35 +15,41 @@
     @endif
     <div class="container" id="fghjk">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-4  bg-light ">
+    <!--  <div class="col-xs-12 col-sm-12 col-md-4  bg-light ">
         <div class="container containerimg">
           <img src="{{ Auth::user()->foto }}" class="img100" alt="">
-          <button  class="btn btn-primary btn-block float-left" width="80" height="50" data-toggle="modal" data-target="#cambiaImagen">Cambiar Imagen</button>
+          <button  class="btn btn-primary btn-block float-left" width="80" height="50" data-toggle="modal" data-target="#cambiaImagen">Cambiar Imagen</button> 
+           </div>
+      </div>-->
 
 
           <!----------------------ModalCambia imagen---------------------->
           <div id="cambiaImagen" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-sm">
 
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
+                  <br>
                  <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
                 <div class="modal-body" >
-                  <form  action="{{action('ImagesController@store')}}" method="post" id="frm" files="true" enctype="multipart/form-data">
+                  <form class="md-form" action="{{action('ImagesController@store')}}" method="post" id="frm" files="true" enctype="multipart/form-data">
                   {{csrf_field()}}
 
                   <input type="hidden" value="{{ Auth::user()->idusuario }}" name="idUsuario">
+                  <br>                
 
-                  <input type="file" name="Archivo"  />
+                  <input type="file" name="Archivo"  />                 
+ 
 
                   <input type="submit" value="Cambiar Imagen" class="btn btn-primary btn-block float-left" width="80" height="50">
 
                   </form>
                 </div>
                 <div class="modal-footer">
+                  <br>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -51,18 +58,16 @@
           </div>
           <!----------------------MOdal ENd---------------------->
 
-        </div>
-        <br><br>
-        <nav id="startTime" style="margin:10px !important; font-weight:bold;"></nav>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-8 bg-secondary ">
+       
+     <!-- <div class="col-xs-12 col-sm-12 col-md-8 bg-secondary ">
                <div class="container cotainercover">
                  <img src="{{ Auth::user()->fportada }}" class="img100cover" alt="">
                 <button  class="btn btn-primary btn-block float-left" width="80" height="50" data-toggle="modal" data-target="#cambiaPortada">Cambiar Portada</button>
-
+ </div>
+</div>-->
                <!----------------------ModalCambia portada---------------------->
                <div id="cambiaPortada" class="modal fade" role="dialog">
-                 <div class="modal-dialog modal-lg">
+                 <div class="modal-dialog modal-sm">
                    <div class="modal-content">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -82,8 +87,8 @@
                  </div>
                </div>
                <!----------------------MOdal ENd---------------------->
-               </div>
-      </div>
+              
+      
     </div>
 
     </div>
@@ -112,21 +117,86 @@
                     <div class="col-xs-12 col-sm-12 col-md-9">
                       <textarea class="form-control" rows="5" placeholder="¿Que estas pensando...?" id="comentario" name="comentario"></textarea>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3">
+					    </div>
+					<br>
+					 <div class="row">
+					
+                    <div class="col-xs-12 col-sm-12 col-md-9">
                       <div class="input-group mb-3">
+
                         <select class="custom-select" id="grupo" name="grupo">
                           <option disabled selected>Seleccione el grupo al que va dirigida la publicación</option>
                           @foreach ($gruposhow as $gpo)                  
                             <option value="{{$gpo->idgrupo}}">{{$gpo->nombregrupo}}</option>                  
                           @endforeach
                         </select>
+
+						
+                        <div class="input-group-append">
+                            <label class="input-group-text" for="inputGroupSelect02">Elegir</label>
+                        </div>						
+                      </div>  
+					  
+                     
+                    </div>
+					 </div>
+              
+				  <br>
+                  <div class="row">
+				  
+                    <div class="col-xs-12 col-sm-12 col-md-9">
+                      <textarea class="form-control" rows="5" placeholder="¿Que esta pasando?" id="comentario" name="comentario"></textarea>
+                    </div>				
+				
+					</div>
+						<br>
+					
+				  <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-9">
+                      <textarea class="form-control" rows="6" placeholder="¿Que estas pensando y sintiendo?" id="comentario2" name="comentario2"></textarea>
+                    </div >
+					<br>	
+				  </div>
+				  <br>
+				  <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-9">
+                      <textarea class="form-control" rows="6" placeholder="¿Que es lo bueno y malo de esta experiencia?" id="comentario3" name="comentario2"></textarea>
+                    </div >
+					<br>	
+				  </div>
+				  <br>
+				   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-9">
+                      <textarea class="form-control" rows="6" placeholder="¿Que más podria haber hecho?" id="comentario2" name="comentario4"></textarea>
+                    </div >
+					<br>	
+				  </div>
+				  <br>
+				   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-9">
+                      <textarea class="form-control" rows="6" placeholder="¿Que haria en una experiencia similar?" id="comentario5" name="comentario2"></textarea>
+                    </div >
+					<br>	
+				  </div>
+				  <br>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-12 col-md-9">					
+                      <textarea class="form-control" placeholder="¿Que estas pensando y sintiendo?" id="comentario33" name="comentario6"></textarea>
+                    </div>
+					<br>
+					
+					 <span class="btn btn-default ">
+                            <input type="file"  name="archiovs[]" multiple >
+                      </span>
+				  </div>
+				  
                         <div class="input-group-append">
                             <label class="input-group-text" for="inputGroupSelect02">Elegir</label>
                         </div>
                       </div>  
-                      <span class="btn btn-default ">
-                            <input type="file"  name="archiovs[]" multiple >
-                      </span>
+                      <!--<span class="btn btn-default ">
+                            // <input type="file"  name="archiovs[]" multiple >
+                      // </span>-->
                     </div>
                   </div><br>
                   <input type="submit" class="btn btn-primary" value="Publicar">

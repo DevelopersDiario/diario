@@ -160,26 +160,26 @@
 				  <br>
 				  <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-9">
-                      <textarea class="form-control" rows="6" placeholder="¿Que es lo bueno y malo de esta experiencia?" id="comentario3" name="comentario2"></textarea>
+                      <textarea class="form-control" rows="6" placeholder="¿Que es lo bueno y malo de esta experiencia?" id="comentario3" name="comentario3"></textarea>
                     </div >
 					<br>	
 				  </div>
 				  <br>
 				   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-9">
-                      <textarea class="form-control" rows="6" placeholder="¿Que más podria haber hecho?" id="comentario2" name="comentario4"></textarea>
+                      <textarea class="form-control" rows="6" placeholder="¿Que más podria haber hecho?" id="comentario4" name="comentario4"></textarea>
                     </div >
 					<br>	
 				  </div>
 				  <br>
 				   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-9">
-                      <textarea class="form-control" rows="6" placeholder="¿Que haria en una experiencia similar?" id="comentario5" name="comentario2"></textarea>
+                      <textarea class="form-control" rows="6" placeholder="¿Que haria en una experiencia similar?" id="comentario5" name="comentario5"></textarea>
                     </div >
 					<br>	
 				  </div>
 				  <br>
-				  <div class="row">
+				  <!--div class="row">
 				  <div class="col-xs-12 col-sm-12 col-md-9">					
                       <textarea class="form-control" placeholder="¿Que estas pensando y sintiendo?" id="comentario33" name="comentario6"></textarea>
                     </div>
@@ -188,7 +188,7 @@
 					 <span class="btn btn-default ">
                             <input type="file"  name="archiovs[]" multiple >
                       </span>
-				  </div>
+				  </div-->
 				  
                         <div class="input-group-append">
                             <label class="input-group-text" for="inputGroupSelect02">Elegir</label>
